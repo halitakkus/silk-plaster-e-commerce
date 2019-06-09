@@ -31,6 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,7 +42,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MemberManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SilkPlaster.DataAccessLayer\SilkPlaster.DataAccessLayer.csproj">
+      <Project>{22af7d9f-badb-4013-92ee-4a606a87d4d7}</Project>
+      <Name>SilkPlaster.DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SilkPlaster.Entities\SilkPlaster.Entities.csproj">
+      <Project>{77300f71-1a21-431f-a3f6-94854ebad3fe}</Project>
+      <Name>SilkPlaster.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
